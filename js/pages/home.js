@@ -1,4 +1,5 @@
 import Header from '../components/home-header';
+import MenuHighlights from '../components/menu-highlights';
 import Section from '../components/section';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       'All our ingredients come directly from our farm or local fishery. So you can be sure that you’re eating the freshest, most sustainable food.',
     ),
   );
+  page.appendChild(MenuHighlights());
 
   return page;
 }
