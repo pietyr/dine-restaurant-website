@@ -30,8 +30,8 @@ function Slide({ title, text }) {
 
   const textWrapper = document.createElement('div');
 
-  const h3 = document.createElement('h3');
-  h3.innerHTML = title;
+  const h2 = document.createElement('h2');
+  h2.innerHTML = title;
 
   const paragraph = document.createElement('p');
   paragraph.innerText = text;
@@ -44,7 +44,7 @@ function Slide({ title, text }) {
     list.appendChild(li);
   });
 
-  textWrapper.appendChild(h3);
+  textWrapper.appendChild(h2);
   textWrapper.appendChild(paragraph);
   textWrapper.appendChild(BookTableButton());
   textWrapper.appendChild(list);
