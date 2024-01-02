@@ -1,3 +1,5 @@
+@use '../utilities/mixins' as utils;
+
 .header {
   &--home {
     background-size: cover;
@@ -23,5 +25,9 @@
         background-image: url('/images/homepage/hero-bg-desktop@2x.jpg');
       }
     }
+  }
+
+  &__content-heading {
+    @include utils.font('xl');
   }
 }
