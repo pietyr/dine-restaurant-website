@@ -1,6 +1,7 @@
 import Header from '../components/home-header';
 import MenuHighlights from '../components/menu-highlights';
 import Section from '../components/section';
+import Slider from '../components/slider';
 
 export default function Home() {
   const page = document.createElement('div');
@@ -18,6 +19,7 @@ export default function Home() {
     ),
   );
   page.appendChild(MenuHighlights());
+  page.appendChild(Slider());
 
   return page;
 }
