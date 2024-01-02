@@ -46,7 +46,7 @@ function Slide({ title, text }) {
 
   textWrapper.appendChild(h2);
   textWrapper.appendChild(paragraph);
-  textWrapper.appendChild(Button('book a table'));
+  textWrapper.appendChild(Button('book a table', 'slider__button', 'dark'));
   textWrapper.appendChild(list);
 
   slide.appendChild(imgWrapper);

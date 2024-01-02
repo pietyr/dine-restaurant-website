@@ -1,0 +1,53 @@
+@use '../utilities/mixins' as utils;
+@use '../utilities/variables' as vars;
+
+.button {
+  border-width: 1px;
+  border-style: solid;
+  text-transform: uppercase;
+  transition: 0.2s;
+
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+
+  @include utils.font('head-s');
+
+  &--dark {
+    background-color: vars.$cod-gray;
+  }
+
+  &--transparent-dark,
+  &--transparent-light {
+    background-color: transparent;
+  }
+
+  &--dark,
+  &--transparent-dark {
+    color: white;
+    border-color: white;
+
+    &:hover {
+      color: white;
+      border-color: white;
+      &:hover {
+        background-color: white;
+        color: vars.$cod-gray;
+      }
+    }
+  }
+
+  &--transparent-light {
+    color: vars.$cod-gray;
+    border-color: vars.$cod-gray;
+
+    &:hover {
+      background-color: vars.$cod-gray;
+      color: white;
+    }
+  }
+
+  &:inactive {
+    border-color: vars.$shuttle-gray;
+    color: vars.$shuttle-gray;
+  }
+}

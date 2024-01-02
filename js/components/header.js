@@ -30,7 +30,11 @@ export default function Header(headingText, paragraphText, page = 'home') {
   headerContentWrapper.appendChild(headerContentText);
 
   if (page === 'home') {
-    const bookTableButton = Button('book a table', 'header__button');
+    const bookTableButton = Button(
+      'book a table',
+      'header__button',
+      'transparent-dark',
+    );
     headerContentWrapper.appendChild(bookTableButton);
   }
 

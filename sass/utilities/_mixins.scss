@@ -3,21 +3,25 @@
     font-size: 5rem;
     font-weight: 300;
     line-height: 1em;
+    letter-spacing: -1px;
   }
   @if $size == 'head-l' {
     font-size: 3rem;
     font-weight: 700;
     line-height: 1em;
+    letter-spacing: -0.5px;
   }
   @if $size == 'head-m' {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2em;
+    letter-spacing: -0.25px;
   }
   @if $size == 'head-s' {
     font-size: 1.0625rem;
     font-weight: 600;
     line-height: 1.6470588235294117em;
+    letter-spacing: 2.5px;
   }
   @if $size == 'body-1' {
     font-size: 1.25rem;

@@ -7,7 +7,9 @@ export default function Prefooter() {
   paragraph.innerHTML = 'Ready to make a reservation?';
 
   prefooter.appendChild(paragraph);
-  prefooter.appendChild(Button('book a table'));
+  prefooter.appendChild(
+    Button('book a table', 'prefooter__button', 'transparent-dark'),
+  );
 
   return prefooter;
 }

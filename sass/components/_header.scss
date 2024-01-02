@@ -28,6 +28,6 @@
   }
 
   &__content-heading {
-    @include utils.font('xl');
+    @include utils.font('head-xl');
   }
 }
