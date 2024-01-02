@@ -1,4 +1,4 @@
-import Header from '../components/home-header';
+import Header from '../components/header';
 import MenuHighlights from '../components/menu-highlights';
 import Prefooter from '../components/prefooter';
 import Section from '../components/section';
