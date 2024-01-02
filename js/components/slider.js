@@ -1,3 +1,5 @@
+import BookTableButton from './book-table-button';
+
 const content = [
   {
     title: 'Family Gathering',
@@ -44,6 +46,7 @@ function Slide({ title, text }) {
 
   textWrapper.appendChild(h3);
   textWrapper.appendChild(paragraph);
+  textWrapper.appendChild(BookTableButton());
   textWrapper.appendChild(list);
 
   slide.appendChild(imgWrapper);
