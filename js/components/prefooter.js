@@ -1,4 +1,4 @@
-import BookTableButton from './book-table-button';
+import Button from './button';
 
 export default function Prefooter() {
   const prefooter = document.createElement('section');
@@ -7,7 +7,7 @@ export default function Prefooter() {
   paragraph.innerHTML = 'Ready to make a reservation?';
 
   prefooter.appendChild(paragraph);
-  prefooter.appendChild(BookTableButton());
+  prefooter.appendChild(Button('book a table'));
 
   return prefooter;
 }

@@ -1,5 +1,5 @@
 import websiteLogoURL from '../../images/logo.svg';
-import BookTableButton from './book-table-button';
+import Button from './button';
 
 export default function Header(headingText, paragraphText, page = 'home') {
   const header = document.createElement('header');
@@ -30,7 +30,7 @@ export default function Header(headingText, paragraphText, page = 'home') {
   headerContentWrapper.appendChild(headerContentText);
 
   if (page === 'home') {
-    const bookTableButton = BookTableButton('header__button');
+    const bookTableButton = Button('book a table', 'header__button');
     headerContentWrapper.appendChild(bookTableButton);
   }
 

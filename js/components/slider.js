@@ -1,4 +1,4 @@
-import BookTableButton from './book-table-button';
+import Button from './button';
 
 const content = [
   {
@@ -46,7 +46,7 @@ function Slide({ title, text }) {
 
   textWrapper.appendChild(h2);
   textWrapper.appendChild(paragraph);
-  textWrapper.appendChild(BookTableButton());
+  textWrapper.appendChild(Button('book a table'));
   textWrapper.appendChild(list);
 
   slide.appendChild(imgWrapper);
