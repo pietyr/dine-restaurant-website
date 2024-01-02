@@ -7,7 +7,13 @@ import Footer from '../components/footer';
 
 export default function Home() {
   const page = document.createElement('div');
-  page.appendChild(Header());
+  page.appendChild(
+    Header(
+      'Exquisite dining since 1989',
+      'Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from the comfort of our farmhouse.',
+      'home',
+    ),
+  );
   page.appendChild(
     Section(
       'Enjoyable place for all the family',
