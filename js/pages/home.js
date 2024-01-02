@@ -3,6 +3,7 @@ import MenuHighlights from '../components/menu-highlights';
 import Prefooter from '../components/prefooter';
 import Section from '../components/section';
 import Slider from '../components/slider';
+import Footer from '../components/footer';
 
 export default function Home() {
   const page = document.createElement('div');
@@ -22,6 +23,7 @@ export default function Home() {
   page.appendChild(MenuHighlights());
   page.appendChild(Slider());
   page.appendChild(Prefooter());
+  page.appendChild(Footer());
 
   return page;
 }
