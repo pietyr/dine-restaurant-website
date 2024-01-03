@@ -1,0 +1,39 @@
+@use '../utilities/mixins' as utils;
+@use '../utilities/variables' as vars;
+
+.menu {
+  background-color: vars.$cod-gray;
+  color: white;
+  text-align: center;
+
+  &__introduction-heading {
+    @include utils.font(
+      $size: 'head-l',
+      $weight: 'head-l',
+      $height: 'head-xl',
+      $spacing: 'head-xl'
+    );
+  }
+
+  &__introduction-text {
+    @include utils.font('body-2');
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      border-top: 1px solid vars.$jet-gray;
+    }
+  }
+
+  &__heading {
+    @include utils.font('head-m');
+  }
+
+  &__text {
+    @include utils.font('body-2');
+  }
+}

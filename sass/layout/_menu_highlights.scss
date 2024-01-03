@@ -1,0 +1,44 @@
+.menu {
+  padding: 3.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5.5rem;
+
+  &__introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__introduction-heading,
+  &__introduction-text,
+  &__heading,
+  &__text {
+    margin: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 3.75rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    &:not(:first-child) {
+      padding-top: 1.5rem;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
