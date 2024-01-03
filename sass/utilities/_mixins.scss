@@ -41,3 +41,27 @@ Regular 400
 SemiBold 600
 Bold 700
 */
+
+@mixin bg-i($title, $min-tablet-width: 700px, $min-desktop-width: 1000px) {
+  background-image: url('/images/homepage/#{$title}-mobile.jpg');
+
+  @media (min-width: $min-tablet-width) {
+    background-image: url('/images/homepage/#{$title}-tablet.jpg');
+  }
+
+  @media (min-width: $min-desktop-width) {
+    background-image: url('/images/homepage/#{$title}-desktop.jpg');
+  }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('/images/homepage/#{$title}-mobile@2x.jpg');
+
+    @media (min-width: $min-tablet-width) {
+      background-image: url('/images/homepage/#{$title}-tablet@2x.jpg');
+    }
+
+    @media (min-width: $min-desktop-width) {
+      background-image: url('/images/homepage/#{$title}-desktop@2x.jpg');
+    }
+  }
+}
