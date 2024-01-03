@@ -1,0 +1,43 @@
+@use '../utilities/mixins' as utils;
+@use '../utilities/variables' as vars;
+
+.section {
+  &__image {
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &--enjoyable-place {
+      @include utils.bg-i('enjoyable-place');
+    }
+
+    &--locally-sourced {
+      @include utils.bg-i('locally-sourced');
+    }
+  }
+
+  &__text-wrapper {
+    text-align: center;
+  }
+
+  &__heading {
+    @include utils.font(
+      $size: 'head-l',
+      $weight: 'head-l',
+      $height: 'head-xl',
+      $spacing: 'head-xl'
+    );
+  }
+
+  &__text {
+    @include utils.font('body-2');
+  }
+
+  &__pattern {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    &--divide {
+      background-image: url('/images/patterns/pattern-divide.svg');
+    }
+  }
+}

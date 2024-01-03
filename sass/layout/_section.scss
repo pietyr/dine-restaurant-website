@@ -1,0 +1,46 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1.5rem;
+  padding-bottom: calc(6.25rem - 4.5rem);
+  gap: 2rem;
+
+  &:has(.section__image--enjoyable-place) {
+    padding-bottom: 6.25rem;
+  }
+
+  &__image-wrapper {
+    &:has(.section__image--enjoyable-place) {
+      overflow: visible;
+      height: calc(400px - 4.5rem);
+    }
+  }
+
+  &__image {
+    position: relative;
+    height: 400px;
+    &--enjoyable-place {
+      top: -4.5rem;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__heading,
+  &__text {
+    margin-block: 0;
+  }
+
+  &__pattern {
+    &--divide {
+      height: 7px;
+      width: 71px;
+      padding-block: 1rem;
+    }
+  }
+}
