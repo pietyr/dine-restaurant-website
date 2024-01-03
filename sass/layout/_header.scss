@@ -1,9 +1,18 @@
 .header {
+  padding-inline: 2rem;
+  text-align: center;
+
   &--home {
     padding-top: 220px;
   }
 
   &__heading {
     margin: 0;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

@@ -1,6 +1,9 @@
 @use '../utilities/mixins' as utils;
+@use '../utilities/variables' as vars;
 
 .header {
+  text-align: center;
+
   &--home {
     background-size: cover;
 
@@ -27,7 +30,16 @@
     }
   }
 
+  &__content-wrapper {
+    color: white;
+  }
+
   &__content-heading {
-    @include utils.font('head-xl');
+    @include utils.font('head-l');
+    font-weight: 300;
+  }
+
+  &__content {
+    @include utils.font('body-2');
   }
 }
