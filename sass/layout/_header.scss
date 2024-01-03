@@ -1,18 +1,35 @@
 .header {
   padding-inline: 2rem;
-  text-align: center;
 
   &--home {
-    padding-top: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-top: 14.5rem;
+    padding-bottom: 8.5rem;
   }
-
+  // 40px, 38px, 58px
   &__heading {
     margin: 0;
+    display: flex;
+    justify-content: center;
   }
-
   &__content-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2.5rem;
+  }
+
+  &__content-heading {
+    margin: 0;
+  }
+
+  &__content {
+    margin: 0;
+  }
+
+  &__button {
+    margin-top: 1rem;
   }
 }
