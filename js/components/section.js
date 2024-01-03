@@ -1,3 +1,5 @@
+import Pattern from './pattern';
+
 let id = 0;
 
 export default function Section(heading, text) {
@@ -17,9 +19,6 @@ export default function Section(heading, text) {
   const textWrapper = document.createElement('div');
   textWrapper.className = 'section__text-wrapper';
 
-  const patternDivide = document.createElement('div');
-  patternDivide.className = 'section__pattern section__pattern--divide';
-
   const h2 = document.createElement('h2');
   h2.innerHTML = heading;
   h2.className = 'section__heading';
@@ -28,7 +27,7 @@ export default function Section(heading, text) {
   paragraph.innerHTML = text;
   paragraph.className = 'section__text';
 
-  textWrapper.appendChild(patternDivide);
+  textWrapper.appendChild(Pattern('divide', 'section'));
   textWrapper.appendChild(h2);
   textWrapper.appendChild(paragraph);
 
