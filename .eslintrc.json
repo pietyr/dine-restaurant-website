@@ -9,5 +9,16 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false,
+        "variables": true,
+        "allowNamedExports": true
+      }
+    ],
+    "no-plusplus": "off"
+  }
 }
