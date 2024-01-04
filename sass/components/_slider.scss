@@ -2,9 +2,6 @@
 @use '../utilities/variables' as vars;
 
 .slider {
-  &__slide {
-  }
-
   &__img {
     background-size: cover;
     &--family-gathering {

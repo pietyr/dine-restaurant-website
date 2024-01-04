@@ -29,6 +29,14 @@
     margin: 0;
   }
 
+  &__heading {
+    // Fixed height regardless of the number of lines
+    height: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
