@@ -1,0 +1,14 @@
+@use '../utilities/mixins' as utils;
+@use '../utilities/variables' as vars;
+
+.prefooter {
+  @include utils.bg-i('ready-bg');
+  color: white;
+
+  background-size: cover;
+
+  &__text {
+    @include utils.font('head-lm', $height: 'head-lm');
+    text-align: center;
+  }
+}

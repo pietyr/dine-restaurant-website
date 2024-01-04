@@ -1,0 +1,7 @@
+@use '../utilities/mixins' as utils;
+@use '../utilities/variables' as vars;
+
+.footer {
+  background-color: vars.$cod-gray;
+  color: white;
+}

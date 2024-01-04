@@ -1,0 +1,13 @@
+.prefooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4.75rem 3.75rem;
+
+  gap: 1.75rem;
+
+  &__text {
+    margin: 0;
+  }
+}
