@@ -21,7 +21,7 @@ const slides = content.map((slideContent, index) => Slide(slideContent, index));
 
 const slider = document.createElement('section');
 
-let interval = setInterval(intervalFunction, 3000);
+// let interval = setInterval(intervalFunction, 3000);
 
 export default function Slider() {
   slider.className = 'slider';
@@ -39,7 +39,11 @@ function Slide({ title, text }, slideIndex) {
   imgWrapper.className = 'slider__img-wrapper';
 
   const img = document.createElement('div');
-  img.className = `slider__img slider__img--${title}`;
+  img.className = `slider__img slider__img--${title
+    .toLowerCase()
+    .replace(' ', '-')}`;
+
+  imgWrapper.appendChild(img);
 
   const textWrapper = document.createElement('div');
   textWrapper.className = 'slider__text-wrapper';
