@@ -1,0 +1,56 @@
+@use '../utilities/mixins' as utils;
+@use '../utilities/variables' as vars;
+
+.slider {
+  &__slide {
+  }
+
+  &__img {
+    background-size: cover;
+    &--family-gathering {
+      @include utils.bg-i('family-gathering');
+    }
+    &--special-events {
+      @include utils.bg-i('special-events');
+    }
+    &--social-events {
+      @include utils.bg-i('social-events');
+    }
+  }
+
+  &__heading {
+    @include utils.font('head-l');
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    @include utils.font('body-2');
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+    text-align: center;
+    @include utils.font('body-1', $spacing: 'head-s', $weight: 'head-s');
+    color: vars.$shuttle-gray;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &--active {
+      color: vars.$cod-gray;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 3rem;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom: 1px solid vars.$cod-gray;
+      }
+    }
+  }
+}

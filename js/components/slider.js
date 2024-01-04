@@ -12,7 +12,7 @@ const content = [
     text: 'Whether it’s a romantic dinner or special date you’re celebrating with others we’ll look after you. We’ll be sure to mark your special date with an unforgettable meal.',
   },
   {
-    title: ' Social Events',
+    title: 'Social Events',
     text: 'Are you looking to have a larger social event? No problem! We’re more than happy to cater for big parties. We’ll work with you to make your event a hit with everyone.',
   },
 ];
@@ -21,7 +21,7 @@ const slides = content.map((slideContent, index) => Slide(slideContent, index));
 
 const slider = document.createElement('section');
 
-// let interval = setInterval(intervalFunction, 3000);
+let interval = setInterval(intervalFunction, 3000);
 
 export default function Slider() {
   slider.className = 'slider';
@@ -78,9 +78,14 @@ function Slide({ title, text }, slideIndex) {
     list.appendChild(li);
   });
 
-  textWrapper.appendChild(h2);
-  textWrapper.appendChild(paragraph);
-  textWrapper.appendChild(Button('book a table', 'slider__button', 'dark'));
+  const contentWrapper = document.createElement('div');
+  contentWrapper.className = 'slider__content-wrapper';
+
+  contentWrapper.appendChild(h2);
+  contentWrapper.appendChild(paragraph);
+  contentWrapper.appendChild(Button('book a table', 'slider__button', 'dark'));
+
+  textWrapper.appendChild(contentWrapper);
   textWrapper.appendChild(list);
 
   slide.appendChild(imgWrapper);

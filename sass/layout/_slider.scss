@@ -1,0 +1,40 @@
+.slider {
+  &__slide {
+    padding: 5rem 1.5rem 7.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.375rem;
+  }
+
+  &__img {
+    height: 400px;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+  }
+
+  &__heading,
+  &__text {
+    margin: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+
+    margin: 0;
+    padding: 0;
+  }
+}
