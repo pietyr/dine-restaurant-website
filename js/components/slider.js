@@ -17,25 +17,29 @@ const content = [
   },
 ];
 
+const slides = content.map((slideContent, index) => Slide(slideContent, index));
+
+const slider = document.createElement('section');
+
+let interval = setInterval(intervalFunction, 3000);
+
 export default function Slider() {
-  const slider = document.createElement('section');
   slider.className = 'slider';
 
-  const slide = Slide(content[currentSlide]);
-  slider.appendChild(slide);
-
-  currentSlide++; // REMOVE THIS
-  // content.forEach((slide) => slider.appendChild(Slide(slide)));
+  slider.appendChild(slides[currentSlide]);
 
   return slider;
 }
 
-function Slide({ title, text }) {
+function Slide({ title, text }, slideIndex) {
   const slide = document.createElement('article');
   slide.className = 'slider__slide';
 
   const imgWrapper = document.createElement('div');
   imgWrapper.className = 'slider__img-wrapper';
+
+  const img = document.createElement('div');
+  img.className = `slider__img slider__img--${title}`;
 
   const textWrapper = document.createElement('div');
   textWrapper.className = 'slider__text-wrapper';
@@ -54,10 +58,19 @@ function Slide({ title, text }) {
   content.forEach(({ title }, index) => {
     const li = document.createElement('li');
     li.className = 'slider__list-item';
-    if (index === currentSlide) {
+    if (index === slideIndex) {
       li.classList.add('slider__list-item--active');
     }
     li.innerText = title;
+
+    li.addEventListener('click', () => {
+      clearInterval(interval);
+      slider.innerHTML = '';
+      slider.appendChild(slides[index]);
+      currentSlide = index;
+      interval = setInterval(intervalFunction, 3000);
+    });
+
     list.appendChild(li);
   });
 
@@ -70,4 +83,10 @@ function Slide({ title, text }) {
   slide.appendChild(textWrapper);
 
   return slide;
+}
+
+function intervalFunction() {
+  slider.innerHTML = '';
+  currentSlide = currentSlide === 2 ? 0 : currentSlide + 1;
+  slider.appendChild(slides[currentSlide]);
 }
