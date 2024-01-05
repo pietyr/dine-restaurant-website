@@ -5,11 +5,11 @@
   text-align: center;
 
   &--home {
-    background-size: contain;
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     background-color: vars.$cod-gray;
-    @include utils.bg-i('hero-bg', 700px, 1000px);
+    @include utils.bg-i('hero-bg', 550px, 1000px);
   }
 
   &__content-wrapper {
@@ -17,11 +17,17 @@
   }
 
   &__content-heading {
-    @include utils.font('head-l');
+    @include utils.font('head-lm');
+    @media (min-width: 450px) {
+      @include utils.font('head-l', $weight: 'head-xl', $spacing: 'head-m');
+    }
     font-weight: 300;
   }
 
   &__content {
-    @include utils.font('body-2');
+    @include utils.font('body-2', $spacing: 'body-2');
+    @media (min-width: 450px) {
+      @include utils.font('body-1');
+    }
   }
 }
