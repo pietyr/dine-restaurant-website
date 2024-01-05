@@ -36,6 +36,11 @@
     }
   }
 
+  &__image {
+    display: block;
+    max-width: 100%;
+  }
+
   &__text-wrapper {
     display: flex;
     flex-direction: column;
