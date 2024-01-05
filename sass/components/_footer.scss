@@ -4,4 +4,7 @@
 .footer {
   background-color: vars.$cod-gray;
   color: white;
+
+  text-transform: uppercase;
+  @include utils.font('body-2');
 }
