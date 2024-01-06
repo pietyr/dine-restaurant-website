@@ -26,9 +26,18 @@
       $height: 'head-xl',
       $spacing: 'head-xl'
     );
+
+    @media (min-width: 400px) {
+      max-width: 350px;
+    }
   }
 
   &__text {
     @include utils.font('body-2');
+
+    @media (min-width: 400px) {
+      @include utils.font('body-1');
+      max-width: 470px;
+    }
   }
 }

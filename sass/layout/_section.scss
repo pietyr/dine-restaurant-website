@@ -1,3 +1,5 @@
+$tablet-breakpoint: 400px;
+
 .section {
   display: flex;
   flex-direction: column;
@@ -9,16 +11,30 @@
     padding-bottom: 6.25rem;
   }
 
+  @media (min-width: $tablet-breakpoint) {
+    padding-bottom: 6.25rem;
+  }
+
   &__image-wrapper {
     &:has(.section__image--enjoyable-place) {
       overflow: visible;
       height: calc(400px - 4.5rem);
+      @media (min-width: $tablet-breakpoint) {
+        height: calc(75vw / 1.592 - 4.5rem);
+      }
     }
   }
 
   &__image {
     position: relative;
     height: 400px;
+    @media (min-width: $tablet-breakpoint) {
+      height: unset;
+      aspect-ratio: 1.592;
+      width: 75vw;
+      left: 50%;
+      transform: translate(-50%);
+    }
     &--enjoyable-place {
       top: -4.5rem;
     }
