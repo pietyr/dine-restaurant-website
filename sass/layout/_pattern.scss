@@ -1,7 +1,20 @@
 .pattern {
   &--divide {
+    display: block;
     height: 7px;
     width: 71px;
     padding-block: 1rem;
+  }
+
+  &--lines {
+    @media (min-width: 450px) {
+      display: block;
+    }
+    width: 160px;
+    height: 76px;
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+    transform: translateX(33%);
   }
 }

@@ -1,8 +1,10 @@
 .pattern {
-  display: block;
   background-repeat: no-repeat;
   background-position: center;
   &--divide {
     background-image: url('/images/patterns/pattern-divide.svg');
+  }
+  &--lines {
+    background-image: url('/images/patterns/pattern-lines.svg');
   }
 }
