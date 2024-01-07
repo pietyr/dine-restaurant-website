@@ -31,14 +31,14 @@ export default function Section(heading, text) {
   textWrapper.appendChild(h2);
   textWrapper.appendChild(paragraph);
 
-  section.appendChild(imageWrapper);
-  section.appendChild(textWrapper);
-
   if (id === 1) {
     const patternLines = document.createElement('div');
     patternLines.className = 'section__pattern section__pattern--lines';
-    section.appendChild(patternLines);
+    imageWrapper.appendChild(patternLines);
   }
+
+  section.appendChild(imageWrapper);
+  section.appendChild(textWrapper);
 
   id++;
   return section;
