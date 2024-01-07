@@ -16,6 +16,10 @@ export default function Section(heading, text) {
 
   imageWrapper.appendChild(img);
 
+  if (id === 1) {
+    img.appendChild(Pattern('lines', 'section'));
+  }
+
   const textWrapper = document.createElement('div');
   textWrapper.className = 'section__text-wrapper';
 
@@ -30,12 +34,6 @@ export default function Section(heading, text) {
   textWrapper.appendChild(Pattern('divide', 'section'));
   textWrapper.appendChild(h2);
   textWrapper.appendChild(paragraph);
-
-  if (id === 1) {
-    const patternLines = document.createElement('div');
-    patternLines.className = 'section__pattern section__pattern--lines';
-    imageWrapper.appendChild(patternLines);
-  }
 
   section.appendChild(imageWrapper);
   section.appendChild(textWrapper);
