@@ -70,7 +70,10 @@ function ListItem(heading, text, imgClass) {
   div.appendChild(h3);
   div.appendChild(paragraph);
 
-  listItem.appendChild(Picture(imgClass));
+  const picture = Picture(imgClass);
+  picture.appendChild(Pattern('divide', 'menu-highlights'));
+
+  listItem.appendChild(picture);
   listItem.appendChild(div);
 
   return listItem;
