@@ -36,6 +36,11 @@
     }
   }
 
+  &__image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   &__image {
     display: block;
     max-width: 100%;
