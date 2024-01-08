@@ -7,6 +7,7 @@
   }
 
   &--lines {
+    display: none;
     @media (min-width: 450px) {
       display: block;
     }
@@ -16,5 +17,34 @@
     right: 0;
     bottom: 20%;
     transform: translateX(33%);
+  }
+
+  &--curve {
+    display: none;
+    @media (min-width: 450px) {
+      display: block;
+    }
+    position: absolute;
+    height: 320px;
+  }
+
+  // 895px
+
+  &--top-left,
+  &--top-right {
+    width: min(90vw, 895px);
+    z-index: -1;
+  }
+
+  &--top-left {
+    right: -1.5rem;
+    bottom: 0;
+    transform: translateX(50%);
+  }
+
+  &--top-right {
+    left: -1.5rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }

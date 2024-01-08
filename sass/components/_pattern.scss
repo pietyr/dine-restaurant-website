@@ -7,4 +7,14 @@
   &--lines {
     background-image: url('/images/patterns/pattern-lines.svg');
   }
+
+  &--top-left {
+    background-position: left;
+    background-image: url('/images/patterns/pattern-curve-top-left.svg');
+  }
+
+  &--top-right {
+    background-position: right;
+    background-image: url('/images/patterns/pattern-curve-top-right.svg');
+  }
 }

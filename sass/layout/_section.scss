@@ -6,6 +6,13 @@ $tablet-breakpoint: 400px;
   padding-inline: 1.5rem;
   padding-bottom: calc(6.25rem - 4.5rem);
   gap: 2rem;
+  position: relative;
+
+  &:has(.pattern--top-left) {
+    @media (min-width: 450px) {
+      overflow: hidden;
+    }
+  }
 
   &:has(.section__image--enjoyable-place) {
     padding-bottom: 6.25rem;
