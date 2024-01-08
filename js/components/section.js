@@ -6,6 +6,10 @@ export default function Section(heading, text) {
   const section = document.createElement('section');
   section.className = 'section';
 
+  section.appendChild(
+    Pattern('curve', 'section', `${id % 2 === 0 ? 'top-right' : 'top-left'}`),
+  );
+
   const imageWrapper = document.createElement('div');
   imageWrapper.classList = 'section__image-wrapper';
 
